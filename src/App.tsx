@@ -2,7 +2,6 @@ import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 import CampaignListDemo from "./pages/CampaignListDemo";
 import CampaignCreateDemo from "./pages/CampaignCreateDemo";
 import TransactionalCreateDemo from "./pages/TransactionalCreateDemo";
-import TriggerListDemo from "./pages/TriggerListDemo";
 
 const getClassName = ({ isActive }: { isActive: boolean }) =>
   isActive ? "active" : "";
@@ -32,14 +31,6 @@ export default function App() {
             </div>
           </div>
 
-          <div className="app-nav-section">
-            <div className="app-nav-section-title">Trigger Rules</div>
-            <div className="app-nav-link">
-              <NavLink to="/triggers" className={getClassName}>
-                Rules
-              </NavLink>
-            </div>
-          </div>
         </div>
 
         {/* Main content */}
@@ -49,7 +40,6 @@ export default function App() {
             <Route path="/campaigns" element={<CampaignListDemo />} />
             <Route path="/campaign/new" element={<CampaignCreateDemo />} />
             <Route path="/campaign/new/transactional" element={<TransactionalCreateDemo />} />
-            <Route path="/triggers" element={<TriggerListDemo />} />
           </Routes>
         </div>
       </div>

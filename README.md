@@ -9,7 +9,6 @@ This demo illustrates a proposed UX for a unified campaign management tool that 
 - **Campaign Management** — Create and manage messaging campaigns with built-in classification
 - **Message Classification** — A guided questionnaire that classifies messages as Marketing, Non-marketing, or Transactional based on content and intent
 - **Transactional Campaign Builder** — A dedicated setup flow for transactional messages (booking confirmations, OTPs, payment receipts) that bypasses marketing pipelines
-- **Trigger Rules** — View and manage event-driven trigger rules tied to transactional campaigns
 
 ## Key Features
 
@@ -91,7 +90,6 @@ npm run preview
         ├── CampaignListDemo.tsx        # Campaign list with filters
         ├── CampaignCreateDemo.tsx      # New campaign form (marketing/non-marketing)
         ├── TransactionalCreateDemo.tsx  # Transactional campaign setup
-        ├── TriggerListDemo.tsx         # Trigger rules list
         ├── MessageListDemo.tsx         # Unified message list view
         └── MessageCreateDemo.tsx       # Unified message creation flow
 ```
@@ -103,7 +101,6 @@ npm run preview
 | `/campaigns` | Campaign list (default) |
 | `/campaign/new` | Create new campaign (with classification) |
 | `/campaign/new/transactional` | Transactional campaign setup |
-| `/triggers` | Trigger rules list |
 
 ## License
 
