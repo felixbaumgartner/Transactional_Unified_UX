@@ -175,7 +175,7 @@ export default function MessageListDemo() {
         </div>
         <div className="page-header-actions">
           <button
-            className="btn btn-primary btn-large"
+            className="btn btn-primary"
             onClick={() => navigate("/message/new")}
           >
             + New Message

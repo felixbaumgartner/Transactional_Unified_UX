@@ -286,7 +286,7 @@ export default function MessageCreateDemo() {
             Cancel
           </button>
           <button
-            className="btn btn-primary btn-large"
+            className="btn btn-primary"
             disabled={!name || !messageType}
             onClick={handleSave}
           >
@@ -1614,7 +1614,7 @@ export default function MessageCreateDemo() {
           Cancel
         </button>
         <button
-          className="btn btn-primary btn-large"
+          className="btn btn-primary"
           disabled={!name || !messageType}
           onClick={handleSave}
         >

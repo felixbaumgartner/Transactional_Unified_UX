@@ -100,7 +100,7 @@ export default function TransactionalCreateDemo() {
             Cancel
           </button>
           <button
-            className="btn btn-primary btn-large"
+            className="btn btn-primary"
             disabled={!campaignName}
             onClick={handleSave}
           >
@@ -401,7 +401,7 @@ export default function TransactionalCreateDemo() {
           Cancel
         </button>
         <button
-          className="btn btn-primary btn-large"
+          className="btn btn-primary"
           disabled={!campaignName}
           onClick={handleSave}
         >

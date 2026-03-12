@@ -139,7 +139,7 @@ export default function CampaignCreateDemo() {
           </button>
           {isMarketingOrNonMarketing && (
             <button
-              className="btn btn-primary btn-large"
+              className="btn btn-primary"
               disabled={!campaignName}
               onClick={handleSave}
             >
@@ -202,7 +202,7 @@ export default function CampaignCreateDemo() {
               setup page to configure trigger and campaign settings together.
             </p>
             <button
-              className="btn btn-primary btn-large"
+              className="btn btn-primary"
               onClick={() => navigate("/campaign/new/transactional")}
             >
               Continue to Transactional Setup &rarr;
@@ -765,7 +765,7 @@ export default function CampaignCreateDemo() {
               Cancel
             </button>
             <button
-              className="btn btn-primary btn-large"
+              className="btn btn-primary"
               disabled={!campaignName}
               onClick={handleSave}
             >

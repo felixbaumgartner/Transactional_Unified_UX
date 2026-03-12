@@ -184,7 +184,7 @@ export default function CampaignListDemo() {
         </div>
         <div className="page-header-actions">
           <button
-            className="btn btn-primary btn-large"
+            className="btn btn-primary"
             onClick={() => navigate("/campaign/new")}
           >
             + New Campaign
