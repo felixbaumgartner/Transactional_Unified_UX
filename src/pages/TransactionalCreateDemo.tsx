@@ -11,11 +11,9 @@ export default function TransactionalCreateDemo() {
   const [channel, setChannel] = useState<MessageChannel>("email");
 
   /* ── Input Configuration (topic) ── */
-  const [inputTopic, setInputTopic] = useState("");
 
   /* ── Content ── */
   const [contentTrackingLabel, setContentTrackingLabel] = useState("");
-  const [messageCategory, setMessageCategory] = useState("");
 
   /* ── Experiment ── */
   const [experimentEnabled, setExperimentEnabled] = useState(false);
@@ -182,24 +180,6 @@ export default function TransactionalCreateDemo() {
           </div>
         </div>
 
-        {/* Input Topic */}
-        <div className="form-group">
-          <label className="form-label">Input Topic</label>
-          <select
-            className="form-select"
-            value={inputTopic}
-            onChange={(e) => setInputTopic(e.target.value)}
-          >
-            <option value="">Select a topic...</option>
-            <option>booking_events</option>
-            <option>payment_events</option>
-            <option>identity_events</option>
-            <option>trip_events</option>
-            <option>browsing_events</option>
-            <option>engagement_events</option>
-          </select>
-        </div>
-
       </div>
 
       {/* ═══ Section 3: Content ═══ */}
@@ -216,20 +196,6 @@ export default function TransactionalCreateDemo() {
               value={contentTrackingLabel}
               onChange={(e) => setContentTrackingLabel(e.target.value)}
             />
-          </div>
-          <div className="form-group">
-            <label className="form-label">Message Category</label>
-            <select
-              className="form-select"
-              value={messageCategory}
-              onChange={(e) => setMessageCategory(e.target.value)}
-            >
-              <option value="">Select category...</option>
-              <option>booking</option>
-              <option>payment</option>
-              <option>identity</option>
-              <option>informational</option>
-            </select>
           </div>
         </div>
         <div className="form-group">
