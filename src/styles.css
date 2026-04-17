@@ -954,3 +954,42 @@ body {
   color: var(--color-green-600);
   white-space: nowrap;
 }
+
+/* Classification path */
+
+.classification-summary {
+  padding: 12px 16px;
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+}
+
+.classification-path {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.classification-path-step {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--color-gray-800);
+}
+
+.classification-path-step--p2 {
+  background: var(--color-blue-100);
+  border-color: #b3d4fc;
+  color: var(--color-blue-600);
+}
+
+.classification-path-arrow {
+  font-size: 16px;
+  color: var(--color-gray-300);
+  margin: 0 2px;
+}

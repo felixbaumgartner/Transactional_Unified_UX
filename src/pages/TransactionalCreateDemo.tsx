@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { MessageChannel, CHANNEL_LABELS } from "../constants";
+import ClassificationQuestionnaire, { Classification } from "../components/ClassificationQuestionnaire";
 
 export default function TransactionalCreateDemo() {
   const navigate = useNavigate();
@@ -29,6 +30,13 @@ export default function TransactionalCreateDemo() {
   /* ── UI ── */
   const [toast, setToast] = useState<string | null>(null);
   const [saved, setSaved] = useState(false);
+
+  /* ── Classification ── */
+  const [classification, setClassification] = useState<Classification | null>(null);
+
+  const handleClassificationChange = useCallback((c: Classification | null) => {
+    setClassification(c);
+  }, []);
 
   function handleSave() {
     setSaved(true);
@@ -121,6 +129,20 @@ export default function TransactionalCreateDemo() {
       >
         This message has been validated as transactional. It will be routed
         through the priority transactional pipeline, bypassing Janeway.
+      </div>
+
+      {/* ═══ Message Classification ═══ */}
+      <div className="bui-box">
+        <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 4 }}>
+          Message Classification
+        </div>
+        <p className="text-muted" style={{ marginBottom: 16, fontSize: 13 }}>
+          Determines routing priority, delivery SLOs, and retry policies.
+        </p>
+        <ClassificationQuestionnaire
+          mode="inline"
+          onChange={handleClassificationChange}
+        />
       </div>
 
       {/* ═══ Section 1: Campaign Name ═══ */}
