@@ -22,13 +22,10 @@ export default function App() {
       <div className="app-layout-main">
         {/* Sidebar */}
         <div className="app-layout-sidebar">
-          <div className="app-nav-section">
-            <div className="app-nav-section-title">Emails</div>
-            <div className="app-nav-link">
-              <NavLink to="/campaigns" className={getClassName}>
-                Campaigns
-              </NavLink>
-            </div>
+          <div className="app-nav-link">
+            <NavLink to="/campaigns" className={getClassName}>
+              Campaigns
+            </NavLink>
           </div>
 
         </div>
