@@ -15,8 +15,6 @@ export default function TransactionalCreateDemo() {
 
   /* ── Content ── */
   const [contentTrackingLabel, setContentTrackingLabel] = useState("");
-  const [messageCategory, setMessageCategory] = useState("");
-  const [voucherEnabled, setVoucherEnabled] = useState(false);
 
   /* ── Experiment ── */
   const [experimentEnabled, setExperimentEnabled] = useState(false);
@@ -239,34 +237,6 @@ export default function TransactionalCreateDemo() {
           </div>
         </div>
 
-        {/* Message Category (Janet) */}
-        <div className="form-group">
-          <label className="form-label">
-            Message Category (Janet)
-            <span style={{ color: "var(--color-destructive)" }}>*</span>
-          </label>
-          <select
-            className="form-input"
-            value={messageCategory}
-            onChange={(e) => setMessageCategory(e.target.value)}
-          >
-            <option value="">Select category for {CHANNEL_LABELS[channel]}...</option>
-            <option value="booking_confirmation">Booking Confirmation</option>
-            <option value="payment_receipt">Payment Receipt</option>
-            <option value="cancellation_notice">Cancellation Notice</option>
-            <option value="account_verification">Account Verification</option>
-            <option value="security_alert">Security Alert</option>
-            <option value="invoice">Invoice / Tax Receipt</option>
-            <option value="legal_notice">Legal Notice</option>
-            <option value="otp">OTP / Verification Code</option>
-            <option value="trip_update">Trip Update</option>
-          </select>
-          <div className="text-muted" style={{ marginTop: 4, fontSize: 12 }}>
-            Categories are channel-specific (PROD alignment). 9 categories
-            available for {CHANNEL_LABELS[channel]}.
-          </div>
-        </div>
-
         {/* Tracking Label (Tableau) */}
         <div className="form-group">
           <label className="form-label">
@@ -281,67 +251,6 @@ export default function TransactionalCreateDemo() {
           />
         </div>
 
-        {/* Add Voucher or Coupons toggle */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 10,
-          }}
-        >
-          <label
-            className="toggle-switch"
-            style={{ position: "relative", display: "inline-block", width: 40, height: 22 }}
-          >
-            <input
-              type="checkbox"
-              checked={voucherEnabled}
-              onChange={(e) => setVoucherEnabled(e.target.checked)}
-              style={{ opacity: 0, width: 0, height: 0 }}
-            />
-            <span
-              style={{
-                position: "absolute",
-                cursor: "pointer",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                backgroundColor: voucherEnabled
-                  ? "var(--color-action-foreground)"
-                  : "#ccc",
-                borderRadius: 22,
-                transition: "0.2s",
-              }}
-            >
-              <span
-                style={{
-                  position: "absolute",
-                  content: '""',
-                  height: 16,
-                  width: 16,
-                  left: voucherEnabled ? 20 : 3,
-                  bottom: 3,
-                  backgroundColor: "white",
-                  borderRadius: "50%",
-                  transition: "0.2s",
-                }}
-              />
-            </span>
-          </label>
-          <span style={{ fontSize: 14 }}>Add Voucher or Coupons</span>
-          <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
-            style={{
-              fontSize: 13,
-              color: "var(--color-action-foreground)",
-              textDecoration: "none",
-            }}
-          >
-            More info &#8599;
-          </a>
-        </div>
       </div>
 
       {/* ═══ Section 4: Experiment ═══ */}
