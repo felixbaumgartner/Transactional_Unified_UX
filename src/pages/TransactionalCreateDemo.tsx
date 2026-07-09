@@ -12,6 +12,7 @@ export default function TransactionalCreateDemo() {
   const [channel, setChannel] = useState<MessageChannel>("email");
 
   /* ── Input Configuration (topic) ── */
+  const [inputMessageStructure, setInputMessageStructure] = useState("");
 
   /* ── Content ── */
   const [contentTrackingLabel, setContentTrackingLabel] = useState("");
@@ -200,6 +201,21 @@ export default function TransactionalCreateDemo() {
               )
             )}
           </div>
+        </div>
+
+        {/* Input Message Structure */}
+        <div className="form-group">
+          <label className="form-label">Input Message Structure</label>
+          <select
+            className="form-select"
+            value={inputMessageStructure}
+            onChange={(e) => setInputMessageStructure(e.target.value)}
+          >
+            <option value="">Select a message structure...</option>
+            <option value="flights_message_v1">flights_message_v1</option>
+            <option value="flights_message_v2">flights_message_v2</option>
+            <option value="attractions_message_v1">attractions_message_v1</option>
+          </select>
         </div>
 
       </div>
